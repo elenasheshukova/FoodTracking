@@ -12,6 +12,7 @@ class TrackingViewController: UIViewController {
 
     @IBOutlet weak var dailyScoresTableView: UITableView!
     
+    let user = User()
     let foods = Food.getFoods()
     
     override func viewDidLoad() {

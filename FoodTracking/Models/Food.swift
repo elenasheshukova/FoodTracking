@@ -14,28 +14,32 @@ enum FoodQualityType: String, CaseIterable{
 }
 
 struct Food{
-    var name: String
-    var type: FoodQualityType
-    var scores: [Int]
-    var text: String
+    let id: Int
+    let name: String
+    let type: FoodQualityType
+    let scores: [Int]
+    let text: String
 }
 
 extension Food {
     static func getFoods() -> [Food] {
         return [
             Food(
+                id: 1,
                 name: "Vegetables",
                 type: .high,
                 scores: [2, 2, 2, 1, 0, 0],
                 text: ""
             ),
             Food(
+                id: 2,
                 name: "Fruit",
                 type: .high,
                 scores: [2, 2, 2, 1, 0, 0],
                 text: ""
             ),
             Food(
+                id: 3,
                 name: "Nuts, Seeds and Healthy Oils",
                 type: .high,
                 scores: [2, 2, 1, 0, 0, -1],
@@ -43,18 +47,21 @@ extension Food {
             ),
             //...
             Food(
+                id: 4,
                 name: "Refined Grains",
                 type: .low,
                 scores: [-1, -1, -2, -2, -2, -2],
                 text: ""
             ),
             Food(
+                id: 5,
                 name: "Sweets",
                 type: .low,
                 scores: [-2, -2, -2, -2, -2, -2],
                 text: ""
             ),
             Food(
+                id: 6,
                 name: "Processed Meat",
                 type: .low,
                 scores: [-2, -2, -2, -2, -2, -2],
