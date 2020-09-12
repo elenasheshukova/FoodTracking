@@ -10,21 +10,33 @@ import UIKit
 
 class TrackingViewController: UIViewController {
 
+    @IBOutlet weak var dailyScoresTableView: UITableView!
+    
+    let foods = Food.getFoods()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let detailVC = segue.destination as? FoodDetailViewController else { return }
+        guard let indexPath = dailyScoresTableView.indexPathForSelectedRow else { return }
+        detailVC.food = foods[indexPath.row]
     }
-    */
+}
 
+extension TrackingViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foods.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "food", for: indexPath) as! FoodTableViewCell
+        cell.nameLabel.text = foods[indexPath.row].name
+        
+        return cell
+    }
 }

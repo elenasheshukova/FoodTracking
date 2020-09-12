@@ -15,6 +15,9 @@
 		E733D801250C01EF005B56DC /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D800250C01EF005B56DC /* TrackingViewController.swift */; };
 		E733D803250C0235005B56DC /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D802250C0235005B56DC /* GraphsViewController.swift */; };
 		E733D805250C0254005B56DC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D804250C0254005B56DC /* ProfileViewController.swift */; };
+		E733D807250C9A89005B56DC /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D806250C9A89005B56DC /* Food.swift */; };
+		E733D809250CAAE7005B56DC /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D808250CAAE7005B56DC /* FoodDetailViewController.swift */; };
+		E733D80B250CAF3F005B56DC /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D80A250CAF3F005B56DC /* FoodTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		E733D800250C01EF005B56DC /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		E733D802250C0235005B56DC /* GraphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GraphsViewController.swift; path = FoodTracking/ViewControllers/GraphsViewController.swift; sourceTree = SOURCE_ROOT; };
 		E733D804250C0254005B56DC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E733D806250C9A89005B56DC /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		E733D808250CAAE7005B56DC /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodDetailViewController.swift; path = FoodTracking/ViewControllers/FoodDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		E733D80A250CAF3F005B56DC /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				E733D800250C01EF005B56DC /* TrackingViewController.swift */,
+				E733D80A250CAF3F005B56DC /* FoodTableViewCell.swift */,
+				E733D808250CAAE7005B56DC /* FoodDetailViewController.swift */,
 				E733D802250C0235005B56DC /* GraphsViewController.swift */,
 				E733D804250C0254005B56DC /* ProfileViewController.swift */,
 			);
@@ -109,6 +117,7 @@
 		E733D7FF250C004B005B56DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E733D806250C9A89005B56DC /* Food.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,10 +194,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E733D801250C01EF005B56DC /* TrackingViewController.swift in Sources */,
+				E733D809250CAAE7005B56DC /* FoodDetailViewController.swift in Sources */,
 				E733D803250C0235005B56DC /* GraphsViewController.swift in Sources */,
 				E733D805250C0254005B56DC /* ProfileViewController.swift in Sources */,
 				E733D7E8250BF68B005B56DC /* AppDelegate.swift in Sources */,
+				E733D80B250CAF3F005B56DC /* FoodTableViewCell.swift in Sources */,
 				E733D7EA250BF68B005B56DC /* SceneDelegate.swift in Sources */,
+				E733D807250C9A89005B56DC /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
