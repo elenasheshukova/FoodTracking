@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum FoodQualityType{
-    case high
-    case low
+enum FoodQualityType: String, CaseIterable{
+    case high = "High quality foods"
+    case low = "Low quality foods"
 }
 
 struct Food{
@@ -44,19 +44,19 @@ extension Food {
             //...
             Food(
                 name: "Refined Grains",
-                type: .high,
+                type: .low,
                 scores: [-1, -1, -2, -2, -2, -2],
                 text: ""
             ),
             Food(
                 name: "Sweets",
-                type: .high,
+                type: .low,
                 scores: [-2, -2, -2, -2, -2, -2],
                 text: ""
             ),
             Food(
                 name: "Processed Meat",
-                type: .high,
+                type: .low,
                 scores: [-2, -2, -2, -2, -2, -2],
                 text: ""
             ),

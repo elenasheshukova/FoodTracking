@@ -16,7 +16,6 @@ class TrackingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     // MARK: - Navigation
@@ -29,14 +28,25 @@ class TrackingViewController: UIViewController {
 
 extension TrackingViewController: UITableViewDataSource{
     
+    //количество секций в таблице
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return FoodQualityType.allCases.count
+    }
+    
+    //заголовок секции
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return FoodQualityType.allCases[section].rawValue
+    }
+    
+    //количество строк в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foods.count
+        return foods.filter{$0.type == FoodQualityType.allCases[section]}.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "food", for: indexPath) as! FoodTableViewCell
-        cell.nameLabel.text = foods[indexPath.row].name
-        
+        cell.nameLabel.text = foods.filter{$0.type == FoodQualityType.allCases[indexPath.section]}[indexPath.row].name
         return cell
     }
 }
