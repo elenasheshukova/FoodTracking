@@ -19,6 +19,7 @@
 		E733D809250CAAE7005B56DC /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D808250CAAE7005B56DC /* FoodDetailViewController.swift */; };
 		E733D80B250CAF3F005B56DC /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D80A250CAF3F005B56DC /* FoodTableViewCell.swift */; };
 		E733D80D250CD39D005B56DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D80C250CD39D005B56DC /* User.swift */; };
+		E733D811250D2EE7005B56DC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D810250D2EE7005B56DC /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E733D808250CAAE7005B56DC /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodDetailViewController.swift; path = FoodTracking/ViewControllers/FoodDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		E733D80A250CAF3F005B56DC /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		E733D80C250CD39D005B56DC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E733D810250D2EE7005B56DC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		E733D7FE250BFFED005B56DC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E733D810250D2EE7005B56DC /* TabBarViewController.swift */,
 				E733D800250C01EF005B56DC /* TrackingViewController.swift */,
 				E733D80A250CAF3F005B56DC /* FoodTableViewCell.swift */,
 				E733D808250CAAE7005B56DC /* FoodDetailViewController.swift */,
@@ -204,6 +207,7 @@
 				E733D80D250CD39D005B56DC /* User.swift in Sources */,
 				E733D80B250CAF3F005B56DC /* FoodTableViewCell.swift in Sources */,
 				E733D7EA250BF68B005B56DC /* SceneDelegate.swift in Sources */,
+				E733D811250D2EE7005B56DC /* TabBarViewController.swift in Sources */,
 				E733D807250C9A89005B56DC /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

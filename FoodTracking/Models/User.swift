@@ -9,21 +9,19 @@
 import Foundation
 
 class User{
-    var name: String?
-    var weight: Float?
     
-    var targetScores: Int?
+    static let shared = User()
+
+    private init() {}
     
-    var dayScores : [DayScores]?
+    var name: String = "Ivan"
+    var weight: Float = 80
     
-    init() {
-        self.name = "Ivan"
-        self.weight = 80
-        self.targetScores = 20
-        self.dayScores = [
-            DayScores(date: Date(), scores: [(1, 6), (5, -2)])
-        ]
-    }
+    var targetScores: Int = 20
+    
+    var dayScores : [DayScores] = [
+        DayScores(date: Date(), scores: [(1, 6), (5, -2)])
+    ]
 }
 
 class DayScores {
