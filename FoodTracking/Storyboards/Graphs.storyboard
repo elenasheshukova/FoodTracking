@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,17 +12,34 @@
             <objects>
                 <viewController restorationIdentifier="graphs" storyboardIdentifier="graphs" title="Graphs" id="wy1-eq-BKP" customClass="GraphsViewController" customModule="FoodTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jnk-IH-Ceo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbY-KY-As7" customClass="CircularProgressView" customModule="FoodTracking" customModuleProvider="target">
+                                <rect key="frame" x="71" y="289.66666666666669" width="233" height="233.00000000000006"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZbY-KY-As7" secondAttribute="height" multiplier="233:233" id="930-1S-Fr4"/>
+                                    <constraint firstAttribute="height" constant="233" id="qGa-iv-JcO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZbY-KY-As7" firstAttribute="centerX" secondItem="jnk-IH-Ceo" secondAttribute="centerX" id="8bh-Nm-ct3"/>
+                            <constraint firstItem="ZbY-KY-As7" firstAttribute="centerY" secondItem="jnk-IH-Ceo" secondAttribute="centerY" id="W0a-I0-fca"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8hw-yi-bfM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graphs" image="waveform.path.ecg" catalog="system" id="EUm-Cu-IKe"/>
                     <navigationItem key="navigationItem" title="Graphs" id="VUG-fr-Zia"/>
+                    <connections>
+                        <outlet property="circularProgress" destination="ZbY-KY-As7" id="Xpm-kQ-awk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLn-S1-dWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="662"/>
+            <point key="canvasLocation" x="1666.4000000000001" y="661.33004926108379"/>
         </scene>
     </scenes>
     <resources>

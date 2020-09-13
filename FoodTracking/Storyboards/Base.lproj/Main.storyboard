@@ -32,12 +32,12 @@
             </objects>
             <point key="canvasLocation" x="120" y="236"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Food Tracking-->
         <scene sceneID="ZZ3-cp-p83">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="66f-HM-Ced" customClass="TabBarViewController" customModule="FoodTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="wnf-sW-QZ7"/>
+                    <navigationItem key="navigationItem" title="Food Tracking" id="wnf-sW-QZ7"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wDX-FH-OHb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

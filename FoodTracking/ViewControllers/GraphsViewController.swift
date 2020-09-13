@@ -10,23 +10,16 @@ import UIKit
 
 class GraphsViewController: UIViewController {
     
+    @IBOutlet weak var circularProgress: CircularProgressView!
+    
     var user: User!
     let foods = Food.getFoods()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        circularProgress.trackClr = UIColor.systemGray
+        circularProgress.progressClr = UIColor.systemGreen
+        circularProgress.setProgressWithAnimation(duration: 1.0, value: 0.60)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

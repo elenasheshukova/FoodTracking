@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015629B4250E54D00047E90C /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015629B3250E54D00047E90C /* CircularProgressView.swift */; };
 		E733D7E8250BF68B005B56DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D7E7250BF68B005B56DC /* AppDelegate.swift */; };
 		E733D7EA250BF68B005B56DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D7E9250BF68B005B56DC /* SceneDelegate.swift */; };
 		E733D7EF250BF68B005B56DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E733D7ED250BF68B005B56DC /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		015629B3250E54D00047E90C /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		E733D7E4250BF68B005B56DC /* FoodTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E733D7E7250BF68B005B56DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E733D7E9250BF68B005B56DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				E733D80A250CAF3F005B56DC /* FoodTableViewCell.swift */,
 				E733D808250CAAE7005B56DC /* FoodDetailViewController.swift */,
 				E733D802250C0235005B56DC /* GraphsViewController.swift */,
+				015629B3250E54D00047E90C /* CircularProgressView.swift */,
 				E733D804250C0254005B56DC /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
@@ -221,6 +224,7 @@
 				E733D7EA250BF68B005B56DC /* SceneDelegate.swift in Sources */,
 				E733D811250D2EE7005B56DC /* TabBarViewController.swift in Sources */,
 				E733D807250C9A89005B56DC /* Food.swift in Sources */,
+				015629B4250E54D00047E90C /* CircularProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
