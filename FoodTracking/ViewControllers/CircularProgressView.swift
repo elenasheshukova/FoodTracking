@@ -27,45 +27,44 @@ class CircularProgressView: UIView {
          trackLyr.strokeColor = trackClr.cgColor
       }
    }
+    func makeCircularPath() {
+                
+        self.backgroundColor = UIColor.clear
+        self.layer.cornerRadius = self.frame.size.width/2
     
-   func makeCircularPath() {
+        let circlePath = UIBezierPath(
+            arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2),
+            radius: (frame.size.width - 1.5)/2,
+            startAngle: CGFloat(-0.5 * .pi),
+            endAngle: CGFloat(1.5 * .pi),
+            clockwise: true)
     
-      self.backgroundColor = UIColor.clear
-      self.layer.cornerRadius = self.frame.size.width/2
+        trackLyr.path = circlePath.cgPath
+        trackLyr.fillColor = UIColor.clear.cgColor
+        trackLyr.strokeColor = trackClr.cgColor
+        trackLyr.lineWidth = 0.9 // ширина внутренней линии
+        trackLyr.strokeEnd = 1.0 // максимальное значение для главного круга
     
-      let circlePath = UIBezierPath(
-        arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2),
-        radius: (frame.size.width - 1.5)/2,
-        startAngle: CGFloat(-0.5 * .pi),
-        endAngle: CGFloat(1.5 * .pi),
-        clockwise: true)
+        layer.addSublayer(trackLyr)
     
-      trackLyr.path = circlePath.cgPath
-      trackLyr.fillColor = UIColor.clear.cgColor
-      trackLyr.strokeColor = trackClr.cgColor
-      trackLyr.lineWidth = 3.0 // ширина внутренней линии
-      trackLyr.strokeEnd = 1.0 // максимальное значение для главного круга
+        progressLyr.path = circlePath.cgPath
+        progressLyr.fillColor = UIColor.clear.cgColor
+        progressLyr.strokeColor = progressClr.cgColor
+        progressLyr.lineWidth = 10.0
+        progressLyr.strokeEnd = 0.0
     
-      layer.addSublayer(trackLyr)
-    
-      progressLyr.path = circlePath.cgPath
-      progressLyr.fillColor = UIColor.clear.cgColor
-      progressLyr.strokeColor = progressClr.cgColor
-      progressLyr.lineWidth = 10.0
-      progressLyr.strokeEnd = 0.0
-    
-      layer.addSublayer(progressLyr)
+        layer.addSublayer(progressLyr)
    }
     
    func setProgressWithAnimation(duration: TimeInterval, value: Float) {
     
-      let animation = CABasicAnimation(keyPath: "strokeEnd")
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
     
-      animation.duration = duration
-      animation.fromValue = 0
-      animation.toValue = value
+        animation.duration = duration
+        animation.fromValue = 0
+        animation.toValue = value
     
-      progressLyr.strokeEnd = CGFloat(value)
-      progressLyr.add(animation, forKey: "animateprogress")
+        progressLyr.strokeEnd = CGFloat(value)
+        progressLyr.add(animation, forKey: "animateprogress")
    }
 }
