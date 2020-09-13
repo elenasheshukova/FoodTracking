@@ -8,19 +8,18 @@
 
 import UIKit
 
+protocol FoodTableViewCellDelegate : class {
+    func customcell(cell : FoodTableViewCell, didTappedThe button : UIButton?)
+}
+
 class FoodTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet var scoreButtons: [UIButton]!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    weak var cellDelegate : FoodTableViewCellDelegate?
+
+    @IBAction func changeScores(_ sender: UIButton) {
+        cellDelegate?.customcell(cell: self, didTappedThe: sender)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

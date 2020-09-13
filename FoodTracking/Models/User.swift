@@ -19,17 +19,48 @@ class User{
     
     var targetScores: Int = 20
     
-    var dayScores : [DayScores] = [
-        DayScores(date: Date(), scores: [(1, 6), (5, -2)])
+    var dayScores : [Date : [(foodId: Int,  score: Int)]] = [
+        Date().stripTime() : [(1, 3), (5, 1)]
     ]
+    
+    func addScore(date: Date, foodId: Int){
+        if dayScores[date] != nil {
+            let oldScore = dayScores[date]?.filter({$0.foodId == foodId}).first?.score ?? 0
+            let foodScore = (foodId, oldScore + 1)
+            dayScores[date] = dayScores[date]?.filter({$0.foodId != foodId})
+            dayScores[date]?.append(foodScore)
+        } else {
+            dayScores[date] = [(foodId, 1)]
+        }
+    }
+    
+    func deleteScore(date: Date, foodId: Int){
+        if dayScores[date] != nil {
+            let oldScore = dayScores[date]?.filter({$0.foodId == foodId}).first?.score ?? 0
+            let foodScore = (foodId, (oldScore > 0 ? (oldScore - 1) : 0) )
+            dayScores[date] = dayScores[date]?.filter({$0.foodId != foodId})
+            dayScores[date]?.append(foodScore)
+        }
+    }
+    
+    func getTotalScore(date: Date) -> Int {
+        var total = 0
+        let foods = Food.getFoods()
+        if let currentDayScores = self.dayScores[date] {
+            for score in currentDayScores {
+                if let foodsScores = foods.filter( {$0.id == score.foodId} ).first?.scores {
+                    total += foodsScores.prefix(score.score).reduce(0, +)
+                }
+            }
+        }
+        return total
+    }
 }
 
-class DayScores {
-    var date : Date
-    var scores: [(foodId: Int,  score: Int)]
-    
-    init(date: Date, scores: [(foodId: Int,  score: Int)]) {
-        self.date   = date
-        self.scores = scores
+extension Date {
+    func stripTime() -> Date {
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: self)
+        let date = Calendar.current.date(from: components)
+        return date!
     }
 }
