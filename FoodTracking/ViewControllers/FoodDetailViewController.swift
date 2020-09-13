@@ -10,12 +10,13 @@ import UIKit
 
 class FoodDetailViewController: UIViewController {
     
+    @IBOutlet weak var textLabel: UILabel!
     var food: Food!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(food.name)
+        title = food.name
+        textLabel.text = food.text
     }
-
 }

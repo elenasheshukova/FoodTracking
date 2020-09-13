@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,18 +12,18 @@
             <objects>
                 <viewController restorationIdentifier="tracking" storyboardIdentifier="tracking" title="Tracking" id="QkU-bM-neS" customClass="TrackingViewController" customModule="FoodTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aLZ-yb-SGr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MeY-at-TVB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="food" id="bcg-xz-LAM" customClass="FoodTableViewCell" customModule="FoodTracking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="31"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="31"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bcg-xz-LAM" id="5v3-f6-IAg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbn-uY-H02">
@@ -33,7 +33,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xuw-au-P3k">
-                                                    <rect key="frame" x="213" y="0.0" width="185" height="31"/>
+                                                    <rect key="frame" x="174" y="0.0" width="185" height="31"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1g-hn-e20">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
@@ -116,16 +116,39 @@
             <objects>
                 <viewController title="Category Guide" id="gnr-Gh-E5D" customClass="FoodDetailViewController" customModule="FoodTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gpp-Pu-EqU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4z-r5-jbS">
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="chp-7a-aE4" firstAttribute="bottom" secondItem="X4z-r5-jbS" secondAttribute="bottom" constant="16" id="8ad-mZ-llb"/>
+                            <constraint firstItem="X4z-r5-jbS" firstAttribute="top" secondItem="chp-7a-aE4" secondAttribute="top" constant="16" id="VcB-IT-3ev"/>
+                            <constraint firstItem="chp-7a-aE4" firstAttribute="trailing" secondItem="X4z-r5-jbS" secondAttribute="trailing" constant="16" id="eEo-Ql-ByA"/>
+                            <constraint firstItem="X4z-r5-jbS" firstAttribute="leading" secondItem="chp-7a-aE4" secondAttribute="leading" constant="16" id="kk8-43-tFt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="chp-7a-aE4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Category Guide" id="KTB-pI-PSi"/>
+                    <connections>
+                        <outlet property="textLabel" destination="X4z-r5-jbS" id="cpU-87-aiX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aF8-Hm-JLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2371" y="-3"/>
+            <point key="canvasLocation" x="2368.8000000000002" y="-4.0479760119940034"/>
         </scene>
     </scenes>
     <resources>
