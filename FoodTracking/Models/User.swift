@@ -17,7 +17,7 @@ class User{
     var name: String = "Ivan"
     var weight: Float = 80
     
-    var targetScores: Int = 20
+    var targetScores: Int = 15
     
     var dayScores : [DayScores] = [
         DayScores(date: Date(), scores: [(1, 6), (5, -2)])
