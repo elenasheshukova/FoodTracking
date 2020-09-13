@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,22 +12,45 @@
             <objects>
                 <viewController restorationIdentifier="graphs" storyboardIdentifier="graphs" title="Graphs" id="wy1-eq-BKP" customClass="GraphsViewController" customModule="FoodTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jnk-IH-Ceo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-WV-Hay">
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="568"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbY-KY-As7" customClass="CircularProgressView" customModule="FoodTracking" customModuleProvider="target">
-                                <rect key="frame" x="71" y="289.66666666666669" width="233" height="233.00000000000006"/>
+                                <rect key="frame" x="90.666666666666686" y="331.66666666666669" width="233" height="233.00000000000006"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZbY-KY-As7" secondAttribute="height" multiplier="233:233" id="930-1S-Fr4"/>
                                     <constraint firstAttribute="height" constant="233" id="qGa-iv-JcO"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LX-iP-Znb">
+                                <rect key="frame" x="182" y="774.66666666666663" width="50" height="25.333333333333371"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGV-X0-vhn">
+                                <rect key="frame" x="186" y="133" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZbY-KY-As7" firstAttribute="centerX" secondItem="jnk-IH-Ceo" secondAttribute="centerX" id="8bh-Nm-ct3"/>
+                            <constraint firstItem="LGV-X0-vhn" firstAttribute="top" secondItem="8hw-yi-bfM" secondAttribute="top" constant="89" id="GnF-8v-6D3"/>
+                            <constraint firstItem="cCM-WV-Hay" firstAttribute="top" secondItem="jnk-IH-Ceo" secondAttribute="top" id="LgI-Wu-0eP"/>
                             <constraint firstItem="ZbY-KY-As7" firstAttribute="centerY" secondItem="jnk-IH-Ceo" secondAttribute="centerY" id="W0a-I0-fca"/>
+                            <constraint firstItem="9LX-iP-Znb" firstAttribute="centerX" secondItem="jnk-IH-Ceo" secondAttribute="centerX" id="WeX-pA-bgU"/>
+                            <constraint firstItem="cCM-WV-Hay" firstAttribute="trailing" secondItem="8hw-yi-bfM" secondAttribute="trailing" id="a1h-np-Is9"/>
+                            <constraint firstItem="LGV-X0-vhn" firstAttribute="centerX" secondItem="jnk-IH-Ceo" secondAttribute="centerX" id="b5H-Ha-Jcj"/>
+                            <constraint firstItem="cCM-WV-Hay" firstAttribute="leading" secondItem="8hw-yi-bfM" secondAttribute="leading" id="ckr-FK-kxY"/>
+                            <constraint firstAttribute="bottom" secondItem="cCM-WV-Hay" secondAttribute="bottom" id="eca-tt-Tdt"/>
+                            <constraint firstItem="8hw-yi-bfM" firstAttribute="bottom" secondItem="9LX-iP-Znb" secondAttribute="bottom" constant="62" id="pT7-JG-9Ar"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8hw-yi-bfM"/>
                     </view>
@@ -35,14 +58,17 @@
                     <navigationItem key="navigationItem" title="Graphs" id="VUG-fr-Zia"/>
                     <connections>
                         <outlet property="circularProgress" destination="ZbY-KY-As7" id="Xpm-kQ-awk"/>
+                        <outlet property="descriptionLabel" destination="9LX-iP-Znb" id="eIv-4u-2JQ"/>
+                        <outlet property="valueLabel" destination="LGV-X0-vhn" id="j2j-g6-VS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLn-S1-dWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666.4000000000001" y="661.33004926108379"/>
+            <point key="canvasLocation" x="1665" y="660.21126760563379"/>
         </scene>
     </scenes>
     <resources>
+        <image name="result_background" width="375" height="812"/>
         <image name="waveform.path.ecg" catalog="system" width="128" height="124"/>
     </resources>
 </document>

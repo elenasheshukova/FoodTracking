@@ -43,8 +43,8 @@ class CircularProgressView: UIView {
       trackLyr.path = circlePath.cgPath
       trackLyr.fillColor = UIColor.clear.cgColor
       trackLyr.strokeColor = trackClr.cgColor
-      trackLyr.lineWidth = 5.0
-      trackLyr.strokeEnd = 1.0
+      trackLyr.lineWidth = 3.0 // ширина внутренней линии
+      trackLyr.strokeEnd = 1.0 // максимальное значение для главного круга
     
       layer.addSublayer(trackLyr)
     
