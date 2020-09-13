@@ -11,6 +11,7 @@ import UIKit
 class GraphsViewController: UIViewController {
     
     var user: User!
+    let foods = Food.getFoods()
     
     override func viewDidLoad() {
         super.viewDidLoad()
