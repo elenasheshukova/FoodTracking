@@ -32,13 +32,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var colorThemeLabel: UILabel!
     
     var user: User!
+    let date = Date().stripTime()
+    
     
     private let light = AppTheme.light
     private let dark = AppTheme.dark
     
     private var height = 180.0
     private var weight = 80.0
-    private var currentResult = 0
     
     private enum periodOfDay: String {
         case morning, day, evening, night
@@ -67,6 +68,8 @@ class ProfileViewController: UIViewController {
         metricSwitch.isOn = true
         metricSwitch.backgroundColor = .green
         metricSwitch.layer.cornerRadius = metricSwitch.bounds.height / 2
+        
+       
     }
     // смена темы день-ночь
     @IBAction func changeThemeButton() {
@@ -118,7 +121,7 @@ class ProfileViewController: UIViewController {
     // вывод результатов с предыд. экрана таббара
     private func textMessages() {
         greetingLabel.text = "\(period.label) , \(user.name)! "
-        resultOfTodayLabel.text = "Your current result: \(currentResult)"
+        resultOfTodayLabel.text = "Your current result: \(user.getTotalScore(date: date))"
         
     }
     // функция смены темы экрана
