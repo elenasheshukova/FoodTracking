@@ -82,7 +82,7 @@ extension GraphsViewController {
             scoreMoreLabel.textColor = .black
         } else {
             circularProgress.setProgressWithAnimation(duration: 3.0,
-                                                      value: (Float(1.0)/Float(-31))*Float(value))
+                                                      value: (Float(1.0)/Float(Food.minScores()))*Float(value))
             valueLabel.text = "Ты можешь побороть свои страсти"
             scoreMoreLabel.text = String(value)
             scoreMoreLabel.textColor = .red

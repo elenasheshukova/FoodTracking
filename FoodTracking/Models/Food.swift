@@ -75,12 +75,20 @@ extension Food {
         var maxScores = 0
         let foods = Food.getFoods()
         
-        for food in foods{
-            //foods.filter({$0.type: .high})
-            foods.filter({$0.type: .})
+        for food in foods.filter({$0.type == .high}){
             maxScores += food.scores.filter({$0 > 0}).reduce(0, +)
         }
-        print(maxScores)
         return maxScores
+    }
+        
+    
+    static func minScores() -> Int {
+        var minScores = 0
+        let foods = Food.getFoods()
+        
+        for food in foods.filter({$0.type == .low}){
+            minScores += food.scores.filter({$0 < 0}).reduce(0, +)
+        }
+        return minScores
     }
 }
