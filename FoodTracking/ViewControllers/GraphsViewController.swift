@@ -18,8 +18,9 @@ class GraphsViewController: UIViewController {
     var user: User!
     let date = Date().stripTime()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // используем этот метод, чтобы обновлять данные при каждом переключении между экранами
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let score = user.getTotalScore(date: date)
         changeView(day: score)
@@ -71,17 +72,17 @@ extension GraphsViewController {
         circularProgress.progressClr = progress
         view.backgroundColor = color
         descriptionLabel.text = text
-        scoreMoreLabel.text = String(user.dayScores.count)
+        scoreMoreLabel.text = String(value)
         
         if value > 0 {
             circularProgress.setProgressWithAnimation(duration: 1.5,
-            value: (Float(1.0)/Float(19))*Float(value))
-            valueLabel.text = "Ещё можно набрать \(19 - user.dayScores.count) баллов"
+                                                      value: (Float(1.0)/Float(19))*Float(value))
+            valueLabel.text = "Ещё можно набрать \(19 - value) баллов"
         } else {
             circularProgress.setProgressWithAnimation(duration: 3.0,
-            value: (Float(1.0)/Float(-31))*Float(value))
+                                                      value: (Float(1.0)/Float(-31))*Float(value))
             valueLabel.text = "Ты можешь побороть свои страсти"
-            scoreMoreLabel.text = " - \(String(user.dayScores.count))"
+            scoreMoreLabel.text = String(value)
             scoreMoreLabel.textColor = .red
         }
     }
