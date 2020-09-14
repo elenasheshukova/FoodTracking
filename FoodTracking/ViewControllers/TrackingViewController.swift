@@ -14,11 +14,17 @@ class TrackingViewController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nextDateButton: UIButton!
-    @IBOutlet weak var prevDateButton: UIButton!
+    @IBOutlet weak var totalScoresLabel: UILabel!
     
     var user: User!
     var foods: [Food]!
-    var date = Date().stripTime()
+    var date : Date = Date().stripTime() {
+        didSet{
+            updateDate()
+            updateTotalScores()
+            dailyScoresTableView.reloadData()
+        }
+    }
     
     var currentDayScores: [(foodId: Int, score: Int)] {
         if let currentDayScores = user.dayScores[date] {
@@ -31,16 +37,8 @@ class TrackingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: date)
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMM"
-        dateLabel.text = formatter.string(from: date)
-        
-        let total = user.getTotalScore(date: date)
-        print(total)
-
-        
+        updateDate()
+        updateTotalScores()
     }
     
     // MARK: - Navigation
@@ -49,6 +47,31 @@ class TrackingViewController: UIViewController {
         guard let indexPath = dailyScoresTableView.indexPathForSelectedRow else { return }
         detailVC.food = foods.filter{$0.type == FoodQualityType.allCases[indexPath.section]}[indexPath.row]
     }
+    
+    @IBAction func nextDateButtonTouch() {
+        if let newDate = Calendar.current.date(byAdding: .day, value: 1, to: date) {
+            date = newDate
+        }
+    }
+    
+    @IBAction func prevDateButtonTouch() {
+        if let newDate = Calendar.current.date(byAdding: .day, value: -1, to: date) {
+            date = newDate
+        }
+    }
+    
+    func updateDate(){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM"
+        dateLabel.text = formatter.string(from: date)
+        nextDateButton.isEnabled = (date == Date().stripTime()) ? false : true
+    }
+    
+    func updateTotalScores(){
+        let total = user.getTotalScore(date: date)
+        totalScoresLabel.text = String(total)
+    }
+    
 }
 
 extension TrackingViewController: UITableViewDataSource{
@@ -82,7 +105,7 @@ extension TrackingViewController: UITableViewDataSource{
                 let button = cell.scoreButtons[index]
                 button.setTitle(String(food.scores[index]), for: UIControl.State.normal)
                 
-                button.backgroundColor = index < score ? .yellow : .white
+                button.backgroundColor = index < score ? .systemYellow : .white
             }
         }
         cell.tag = food.id
@@ -98,7 +121,7 @@ extension TrackingViewController: FoodTableViewCellDelegate {
         } else {
             user.addScore(date: date, foodId: cell.tag)
         }
+        updateTotalScores()
         dailyScoresTableView.reloadData()
-        print(user.getTotalScore(date: date))
     }
 }

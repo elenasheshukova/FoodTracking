@@ -40,42 +40,54 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="UgO-A4-yIo"/>
                                                             </constraints>
-                                                            <state key="normal" title="+2"/>
+                                                            <state key="normal" title="+2">
+                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="RWt-KQ-Oee"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdI-hq-wJL">
                                                             <rect key="frame" x="31" y="0.0" width="30" height="31"/>
-                                                            <state key="normal" title="+2"/>
+                                                            <state key="normal" title="+2">
+                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="0XK-3z-V1e"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWl-Tm-tfZ">
                                                             <rect key="frame" x="62" y="0.0" width="30" height="31"/>
-                                                            <state key="normal" title="+2"/>
+                                                            <state key="normal" title="+2">
+                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="RyE-fT-SMg"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4c-H4-2hi">
                                                             <rect key="frame" x="93" y="0.0" width="30" height="31"/>
-                                                            <state key="normal" title="+2"/>
+                                                            <state key="normal" title="+2">
+                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="1Rd-YW-AuQ"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heW-5R-j1a">
                                                             <rect key="frame" x="124" y="0.0" width="30" height="31"/>
-                                                            <state key="normal" title="+2"/>
+                                                            <state key="normal" title="+2">
+                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="Xu6-MU-4EJ"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcf-Kf-E53">
                                                             <rect key="frame" x="155" y="0.0" width="30" height="31"/>
-                                                            <state key="normal" title="+2"/>
+                                                            <state key="normal" title="+2">
+                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="QZx-aq-rjK"/>
                                                             </connections>
@@ -116,9 +128,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="hLL-vf-kAn">
                                 <rect key="frame" x="117" y="8" width="141" height="22"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFi-cQ-uWD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFi-cQ-uWD">
                                         <rect key="frame" x="0.0" y="0.0" width="15.5" height="22"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" image="lessthan" catalog="system"/>
+                                        <connections>
+                                            <action selector="prevDateButtonTouch" destination="QkU-bM-neS" eventType="touchUpInside" id="mwZ-fP-FTC"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt7-bd-CYv">
                                         <rect key="frame" x="49.5" y="0.0" width="42" height="22"/>
@@ -128,19 +144,31 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKm-JA-Kjm">
                                         <rect key="frame" x="125.5" y="0.0" width="15.5" height="22"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" image="greaterthan" catalog="system"/>
+                                        <connections>
+                                            <action selector="nextDateButtonTouch" destination="QkU-bM-neS" eventType="touchUpInside" id="fHW-Zr-vN1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVp-Ph-oQY">
+                                <rect key="frame" x="330" y="1" width="37" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="a5o-ZH-3p8" firstAttribute="trailing" secondItem="OVp-Ph-oQY" secondAttribute="trailing" constant="8" id="1vF-6t-S29"/>
                             <constraint firstItem="hLL-vf-kAn" firstAttribute="centerX" secondItem="a5o-ZH-3p8" secondAttribute="centerX" id="LQ4-bI-8YY"/>
                             <constraint firstItem="hLL-vf-kAn" firstAttribute="top" secondItem="a5o-ZH-3p8" secondAttribute="top" constant="8" id="Omy-Oo-iuz"/>
                             <constraint firstItem="MeY-at-TVB" firstAttribute="leading" secondItem="a5o-ZH-3p8" secondAttribute="leading" id="eKQ-DH-2V3"/>
                             <constraint firstItem="a5o-ZH-3p8" firstAttribute="trailing" secondItem="MeY-at-TVB" secondAttribute="trailing" id="f0p-bh-8ba"/>
                             <constraint firstItem="a5o-ZH-3p8" firstAttribute="bottom" secondItem="MeY-at-TVB" secondAttribute="bottom" id="tRO-Ar-Jzi"/>
                             <constraint firstItem="MeY-at-TVB" firstAttribute="top" secondItem="hLL-vf-kAn" secondAttribute="bottom" constant="8" id="txj-H2-PB3"/>
+                            <constraint firstItem="OVp-Ph-oQY" firstAttribute="centerY" secondItem="hLL-vf-kAn" secondAttribute="centerY" id="yFj-hR-QwM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a5o-ZH-3p8"/>
                     </view>
@@ -155,7 +183,7 @@
                         <outlet property="dailyScoresTableView" destination="MeY-at-TVB" id="L0A-YU-6Cz"/>
                         <outlet property="dateLabel" destination="nt7-bd-CYv" id="9qJ-Hg-ttx"/>
                         <outlet property="nextDateButton" destination="iKm-JA-Kjm" id="Sah-Lc-U4b"/>
-                        <outlet property="prevDateButton" destination="QFi-cQ-uWD" id="U9i-fg-CDT"/>
+                        <outlet property="totalScoresLabel" destination="OVp-Ph-oQY" id="C52-Fu-sR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeR-Jd-sOW" sceneMemberID="firstResponder"/>
