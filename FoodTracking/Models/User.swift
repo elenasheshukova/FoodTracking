@@ -15,9 +15,12 @@ class User{
     private init() {}
     
     var name: String = "Ivan"
-    var weight: Float = 80
+    var weight: Double = 80
+    var height: Double = 180
     
-    var targetScores: Int = 15
+    var colorTheme: AppTheme = .light
+    
+    var targetScores: Int = 20
     
     var dayScores : [Date : [(foodId: Int,  score: Int)]] = [
         Date().stripTime() : [(1, 3), (5, 1)]
