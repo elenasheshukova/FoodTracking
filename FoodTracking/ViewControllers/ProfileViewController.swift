@@ -35,10 +35,10 @@ class ProfileViewController: UIViewController {
         case morning, day, evening, night
         var label: String {
             switch self {
-            case .morning: return "Good morning"
-            case .day: return "Good day"
-            case .evening: return "Good evening"
-            case .night: return "Good night"
+            case .morning: return "Доброе утро"
+            case .day: return "Добрый день"
+            case .evening: return "Добрый вечер"
+            case .night: return "Доброй ночи"
             }
         }
     }
@@ -90,23 +90,23 @@ class ProfileViewController: UIViewController {
         imt = metricSwitch.isOn ? imt : imt*703/10000
         
         calculatedIMTLabel.text = String(format: "%.02f", imt)
-        recommendedIMTLabel.text = "Recommended BWI is 18-25. Your BWI is \(calculatedIMTLabel.text ?? "not yet calculated. Please input correct weight & height.")"
+        recommendedIMTLabel.text = "Рекомендуемый ИМТ 18-25. Твой ИМТ \(calculatedIMTLabel.text ?? "ещё не рассчитан. Пожалуйста, введи правильный вес и рост.")"
         var message : String? {
             switch imt {
-            case 0..<16 : return "Strong deficit of body weight"
-            case 16..<18 : return "Insufficient body weight"
-            case 18..<25 : return "Normal weight"
-            case 25..<30 : return "Excess body weight"
-            case 30... : return "Obesity"
+            case 0..<16 : return "Сильный дефицит массы тела"
+            case 16..<18 : return "Недостаточная масса тела"
+            case 18..<25 : return "Нормальный вес"
+            case 25..<30 : return "Избыточная масса тела"
+            case 30... : return "Ожирение"
             default: return nil
             }
         }
-        currentImtState.text = "Your current state: \(message ?? "not yet defined. Please enter weight & height.")"
+        currentImtState.text = "Текущее состояние: \(message ?? "ещё не определено. Пожалуйста, введи вес и рост.")"
     }
     // вывод результатов с предыд. экрана таббара
     private func textMessages() {
-        greetingLabel.text = "\(period.label) , \(user.name)! "
-        resultOfTodayLabel.text = "Your current result: \(user.getTotalScore(date: date))"
+        greetingLabel.text = "\(period.label), \(user.name)! "
+        resultOfTodayLabel.text = "Твой текущий результат: \(user.getTotalScore(date: date))"
     }
     // функция смены темы экрана
     private func applyTheme(_ theme: AppTheme) {
@@ -145,7 +145,7 @@ class ProfileViewController: UIViewController {
         let stringHour = hour < 10 ? "0\(hour)" : String(hour)
         let minutes = calendar.component(.minute, from: date)
         let stringMinutes = minutes < 10 ? "0\(minutes)" : String(minutes)
-        currentTimeLabel.text = "Current time: " + stringHour + ":" + stringMinutes
+        currentTimeLabel.text = "Текущее время: " + stringHour + ":" + stringMinutes
         
         switch hour {
         case 8...11: period = periodOfDay.morning

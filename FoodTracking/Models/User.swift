@@ -14,13 +14,13 @@ class User{
 
     private init() {}
     
-    var name: String = "Ivan"
+    var name: String = "Иван"
     var weight: Double = 80
     var height: Double = 180
     
     var colorTheme: AppTheme = .light
     
-    var targetScores: Int = 20
+    var targetScores: Int = 15
     
     var dayScores : [Date : [(foodId: Int,  score: Int)]] = [
         Date().stripTime() : [(1, 3), (5, 1)]
