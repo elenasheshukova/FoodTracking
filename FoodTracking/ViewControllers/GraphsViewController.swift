@@ -16,6 +16,7 @@ class GraphsViewController: UIViewController {
     @IBOutlet weak var scoreMoreLabel: UILabel!
     
     var user: User!
+    var foods: [Food]!
     let date = Date().stripTime()
     
     // используем этот метод, чтобы обновлять данные при каждом переключении между экранами

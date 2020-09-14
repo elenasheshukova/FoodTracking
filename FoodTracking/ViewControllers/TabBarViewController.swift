@@ -10,7 +10,8 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
-    let user = User.shared
+    var user = User.shared
+    let foods = Food.getFoods()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,9 @@ class TabBarViewController: UITabBarController {
         let profileVC = viewControllers?[2] as! ProfileViewController
         
         trackingVC.user = user
+        trackingVC.foods = foods
         graphsVC.user = user
+        graphsVC.foods = foods
         profileVC.user = user
     }
 }

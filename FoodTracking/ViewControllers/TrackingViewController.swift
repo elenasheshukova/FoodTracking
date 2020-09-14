@@ -17,7 +17,7 @@ class TrackingViewController: UIViewController {
     @IBOutlet weak var prevDateButton: UIButton!
     
     var user: User!
-    let foods = Food.getFoods()
+    var foods: [Food]!
     var date = Date().stripTime()
     
     var currentDayScores: [(foodId: Int, score: Int)] {
