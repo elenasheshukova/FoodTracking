@@ -16,12 +16,13 @@ class GraphsViewController: UIViewController {
     @IBOutlet weak var scoreMoreLabel: UILabel!
     
     var user: User!
-    let foods = Food.getFoods()
+    let date = Date().stripTime()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        changeView(day: user.dayScores.count)
+        let score = user.getTotalScore(date: date)
+        changeView(day: score)
     }
 }
 

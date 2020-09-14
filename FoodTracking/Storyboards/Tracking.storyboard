@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MeY-at-TVB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="38" width="375" height="580"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="food" id="bcg-xz-LAM" customClass="FoodTableViewCell" customModule="FoodTracking" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="food" id="bcg-xz-LAM" customClass="FoodTableViewCell" customModule="FoodTracking" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="31"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bcg-xz-LAM" id="5v3-f6-IAg">
@@ -41,26 +41,44 @@
                                                                 <constraint firstAttribute="width" constant="30" id="UgO-A4-yIo"/>
                                                             </constraints>
                                                             <state key="normal" title="+2"/>
+                                                            <connections>
+                                                                <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="RWt-KQ-Oee"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdI-hq-wJL">
                                                             <rect key="frame" x="31" y="0.0" width="30" height="31"/>
                                                             <state key="normal" title="+2"/>
+                                                            <connections>
+                                                                <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="0XK-3z-V1e"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWl-Tm-tfZ">
                                                             <rect key="frame" x="62" y="0.0" width="30" height="31"/>
                                                             <state key="normal" title="+2"/>
+                                                            <connections>
+                                                                <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="RyE-fT-SMg"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4c-H4-2hi">
                                                             <rect key="frame" x="93" y="0.0" width="30" height="31"/>
                                                             <state key="normal" title="+2"/>
+                                                            <connections>
+                                                                <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="1Rd-YW-AuQ"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heW-5R-j1a">
                                                             <rect key="frame" x="124" y="0.0" width="30" height="31"/>
                                                             <state key="normal" title="+2"/>
+                                                            <connections>
+                                                                <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="Xu6-MU-4EJ"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcf-Kf-E53">
                                                             <rect key="frame" x="155" y="0.0" width="30" height="31"/>
                                                             <state key="normal" title="+2"/>
+                                                            <connections>
+                                                                <action selector="changeScores:" destination="bcg-xz-LAM" eventType="touchUpInside" id="QZx-aq-rjK"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -80,36 +98,69 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="Dbn-uY-H02" id="cOF-lw-Zgs"/>
+                                            <outletCollection property="scoreButtons" destination="H1g-hn-e20" collectionClass="NSMutableArray" id="tGb-Xs-vXZ"/>
+                                            <outletCollection property="scoreButtons" destination="qdI-hq-wJL" collectionClass="NSMutableArray" id="QgV-PR-RlZ"/>
+                                            <outletCollection property="scoreButtons" destination="tWl-Tm-tfZ" collectionClass="NSMutableArray" id="rEa-rl-reQ"/>
+                                            <outletCollection property="scoreButtons" destination="z4c-H4-2hi" collectionClass="NSMutableArray" id="LUi-Cx-bBC"/>
+                                            <outletCollection property="scoreButtons" destination="heW-5R-j1a" collectionClass="NSMutableArray" id="pD2-zA-qe9"/>
+                                            <outletCollection property="scoreButtons" destination="fcf-Kf-E53" collectionClass="NSMutableArray" id="Itc-sk-suC"/>
                                             <segue destination="gnr-Gh-E5D" kind="show" id="NGI-B7-K6J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="QkU-bM-neS" id="4uK-Ue-E4G"/>
+                                    <outlet property="delegate" destination="QkU-bM-neS" id="5KX-jd-4ev"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="hLL-vf-kAn">
+                                <rect key="frame" x="117" y="8" width="141" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFi-cQ-uWD">
+                                        <rect key="frame" x="0.0" y="0.0" width="15.5" height="22"/>
+                                        <state key="normal" image="lessthan" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt7-bd-CYv">
+                                        <rect key="frame" x="49.5" y="0.0" width="42" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKm-JA-Kjm">
+                                        <rect key="frame" x="125.5" y="0.0" width="15.5" height="22"/>
+                                        <state key="normal" image="greaterthan" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hLL-vf-kAn" firstAttribute="centerX" secondItem="a5o-ZH-3p8" secondAttribute="centerX" id="LQ4-bI-8YY"/>
+                            <constraint firstItem="hLL-vf-kAn" firstAttribute="top" secondItem="a5o-ZH-3p8" secondAttribute="top" constant="8" id="Omy-Oo-iuz"/>
                             <constraint firstItem="MeY-at-TVB" firstAttribute="leading" secondItem="a5o-ZH-3p8" secondAttribute="leading" id="eKQ-DH-2V3"/>
                             <constraint firstItem="a5o-ZH-3p8" firstAttribute="trailing" secondItem="MeY-at-TVB" secondAttribute="trailing" id="f0p-bh-8ba"/>
                             <constraint firstItem="a5o-ZH-3p8" firstAttribute="bottom" secondItem="MeY-at-TVB" secondAttribute="bottom" id="tRO-Ar-Jzi"/>
-                            <constraint firstItem="MeY-at-TVB" firstAttribute="top" secondItem="a5o-ZH-3p8" secondAttribute="top" id="yIi-Uh-p5S"/>
+                            <constraint firstItem="MeY-at-TVB" firstAttribute="top" secondItem="hLL-vf-kAn" secondAttribute="bottom" constant="8" id="txj-H2-PB3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a5o-ZH-3p8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tracking" image="plus.slash.minus" catalog="system" id="IRR-RA-tM7"/>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tracking" id="GHq-DB-e2C">
                         <barButtonItem key="backBarButtonItem" title="Back" id="dLZ-Ho-d6d"/>
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dailyScoresTableView" destination="MeY-at-TVB" id="L0A-YU-6Cz"/>
+                        <outlet property="dateLabel" destination="nt7-bd-CYv" id="9qJ-Hg-ttx"/>
+                        <outlet property="nextDateButton" destination="iKm-JA-Kjm" id="Sah-Lc-U4b"/>
+                        <outlet property="prevDateButton" destination="QFi-cQ-uWD" id="U9i-fg-CDT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeR-Jd-sOW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="-3"/>
+            <point key="canvasLocation" x="1666.4000000000001" y="-3.1484257871064472"/>
         </scene>
         <!--Category Guide-->
         <scene sceneID="9EK-3i-xXW">
@@ -120,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4z-r5-jbS">
-                                <rect key="frame" x="16" y="16" width="343" height="635"/>
+                                <rect key="frame" x="16" y="16" width="343" height="586"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -152,6 +203,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="greaterthan" catalog="system" width="128" height="111"/>
+        <image name="lessthan" catalog="system" width="128" height="111"/>
         <image name="plus.slash.minus" catalog="system" width="128" height="115"/>
     </resources>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		015629B4250E54D00047E90C /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015629B3250E54D00047E90C /* CircularProgressView.swift */; };
+		044CE804250ED5F20073A994 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CE803250ED5F20073A994 /* Themes.swift */; };
 		E733D7E8250BF68B005B56DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D7E7250BF68B005B56DC /* AppDelegate.swift */; };
 		E733D7EA250BF68B005B56DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733D7E9250BF68B005B56DC /* SceneDelegate.swift */; };
 		E733D7EF250BF68B005B56DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E733D7ED250BF68B005B56DC /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		015629B3250E54D00047E90C /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		044CE803250ED5F20073A994 /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		E733D7E4250BF68B005B56DC /* FoodTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E733D7E7250BF68B005B56DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E733D7E9250BF68B005B56DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		E733D7FF250C004B005B56DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				044CE803250ED5F20073A994 /* Themes.swift */,
 				E733D806250C9A89005B56DC /* Food.swift */,
 				E733D80C250CD39D005B56DC /* User.swift */,
 			);
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E733D801250C01EF005B56DC /* TrackingViewController.swift in Sources */,
+				044CE804250ED5F20073A994 /* Themes.swift in Sources */,
 				E733D809250CAAE7005B56DC /* FoodDetailViewController.swift in Sources */,
 				E733D803250C0235005B56DC /* GraphsViewController.swift in Sources */,
 				E733D805250C0254005B56DC /* ProfileViewController.swift in Sources */,
