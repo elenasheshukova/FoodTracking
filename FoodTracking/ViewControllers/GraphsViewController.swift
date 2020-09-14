@@ -78,6 +78,7 @@ extension GraphsViewController {
             circularProgress.setProgressWithAnimation(duration: 1.5,
                                                       value: (Float(1.0)/Float(19))*Float(value))
             valueLabel.text = "Ещё можно набрать \(19 - value) баллов"
+            scoreMoreLabel.textColor = .black
         } else {
             circularProgress.setProgressWithAnimation(duration: 3.0,
                                                       value: (Float(1.0)/Float(-31))*Float(value))
