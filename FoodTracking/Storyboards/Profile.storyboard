@@ -202,22 +202,30 @@
                     <connections>
                         <outlet property="calculatedIMTLabel" destination="zq4-yX-EcI" id="tsg-lz-gEV"/>
                         <outlet property="colorThemeButton" destination="dQz-8B-EET" id="sxb-wa-vmn"/>
-                        <outlet property="colorThemeLabel" destination="x1F-pC-vsT" id="NMy-he-ZAA"/>
                         <outlet property="currentImtState" destination="AFe-Ze-4Ud" id="7cs-20-J1V"/>
                         <outlet property="currentTimeLabel" destination="uxC-CC-RBS" id="qaO-HZ-XO5"/>
-                        <outlet property="englDimensionLabel" destination="sGQ-1o-nJl" id="NCD-sq-I63"/>
-                        <outlet property="generaIMTLabel" destination="wfc-cP-hWp" id="IL9-kr-niY"/>
-                        <outlet property="generalTextLabel" destination="tUc-m1-Q1R" id="KNu-KL-0z6"/>
+                        <outlet property="englDimensionLabel" destination="sGQ-1o-nJl" id="37I-Iu-Lne"/>
                         <outlet property="greetingLabel" destination="dai-jG-m8n" id="JOf-N1-pws"/>
                         <outlet property="heightInputField" destination="Nxg-F9-ZCL" id="4fj-1H-pBm"/>
-                        <outlet property="heightInputLabel" destination="Kdh-nc-ZOg" id="czZ-h7-kZC"/>
-                        <outlet property="metricDimensionLabel" destination="FqC-eM-uuh" id="24U-YE-St2"/>
+                        <outlet property="metricDimensionLabel" destination="FqC-eM-uuh" id="RpL-a7-W3q"/>
                         <outlet property="metricSwitch" destination="gP5-XR-pMn" id="7Ab-Cz-82m"/>
                         <outlet property="recommendedIMTLabel" destination="Xlg-jm-OJj" id="TTT-ii-vSh"/>
                         <outlet property="resultOfTodayLabel" destination="3Oa-G9-UOm" id="C5G-aC-9tm"/>
-                        <outlet property="userIMTLabel" destination="X8d-Gw-AVv" id="fYF-hK-9cj"/>
                         <outlet property="weightInputField" destination="BFq-bB-13Q" id="LGk-6D-aU7"/>
-                        <outlet property="weightInputLabel" destination="Dz5-zU-bgx" id="D9e-3V-RoM"/>
+                        <outletCollection property="textLabels" destination="dai-jG-m8n" collectionClass="NSMutableArray" id="lCJ-kp-LJY"/>
+                        <outletCollection property="textLabels" destination="tUc-m1-Q1R" collectionClass="NSMutableArray" id="Lsg-fb-wbp"/>
+                        <outletCollection property="textLabels" destination="3Oa-G9-UOm" collectionClass="NSMutableArray" id="NaQ-ZS-koz"/>
+                        <outletCollection property="textLabels" destination="wfc-cP-hWp" collectionClass="NSMutableArray" id="efm-gb-4Up"/>
+                        <outletCollection property="textLabels" destination="Kdh-nc-ZOg" collectionClass="NSMutableArray" id="R4U-tt-YGE"/>
+                        <outletCollection property="textLabels" destination="Dz5-zU-bgx" collectionClass="NSMutableArray" id="Cwq-xd-bWA"/>
+                        <outletCollection property="textLabels" destination="X8d-Gw-AVv" collectionClass="NSMutableArray" id="Rng-Uj-c8F"/>
+                        <outletCollection property="textLabels" destination="Xlg-jm-OJj" collectionClass="NSMutableArray" id="cXb-ka-esY"/>
+                        <outletCollection property="textLabels" destination="AFe-Ze-4Ud" collectionClass="NSMutableArray" id="6ZT-UQ-TFy"/>
+                        <outletCollection property="textLabels" destination="9ov-Nd-gIE" collectionClass="NSMutableArray" id="jI3-5Z-ubj"/>
+                        <outletCollection property="textLabels" destination="sGQ-1o-nJl" collectionClass="NSMutableArray" id="Bc5-lv-Z0o"/>
+                        <outletCollection property="textLabels" destination="FqC-eM-uuh" collectionClass="NSMutableArray" id="Qpz-f7-p8A"/>
+                        <outletCollection property="textLabels" destination="x1F-pC-vsT" collectionClass="NSMutableArray" id="xeh-Vq-7gS"/>
+                        <outletCollection property="textLabels" destination="uxC-CC-RBS" collectionClass="NSMutableArray" id="4yo-Mf-Kh0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDP-Ff-gpe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
