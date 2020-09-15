@@ -39,8 +39,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qi3-Sq-b61">
+                                <rect key="frame" x="0.0" y="131" width="375" height="2"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="hmw-xZ-uCW"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="mDw-sj-M8g">
-                                <rect key="frame" x="20" y="140.5" width="335" height="218"/>
+                                <rect key="frame" x="20" y="140" width="335" height="218"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вычисли Индекс Массы Тела (ИМТ)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfc-cP-hWp">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="21.5"/>
@@ -77,7 +84,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="180 cm" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxg-F9-ZCL">
                                                 <rect key="frame" x="0.0" y="0.0" width="103.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <connections>
                                                     <action selector="heightInputAction:" destination="yCf-Vi-Jzu" eventType="editingDidEnd" id="lzJ-4H-gs4"/>
                                                 </connections>
@@ -113,7 +120,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-RF-X5L">
-                                <rect key="frame" x="30" y="378.5" width="315" height="67"/>
+                                <rect key="frame" x="30" y="378" width="315" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изменить метрическую систему" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-Nd-gIE">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -147,19 +154,20 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-8y-zO7">
-                                <rect key="frame" x="30" y="475.5" width="315" height="81.5"/>
+                                <rect key="frame" x="30" y="470.5" width="315" height="81.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="xuh-F5-wbt">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="xuh-F5-wbt">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цветовая тема" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1F-pC-vsT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цветовая тема" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1F-pC-vsT">
                                                 <rect key="frame" x="0.0" y="0.0" width="126.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQz-8B-EET">
-                                                <rect key="frame" x="179.5" y="0.0" width="135.5" height="30"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQz-8B-EET">
+                                                <rect key="frame" x="210.5" y="0.0" width="104.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="День / Ночь"/>
                                                 <connections>
                                                     <action selector="changeThemeButton" destination="yCf-Vi-Jzu" eventType="touchUpInside" id="1gU-TH-Yg9"/>
@@ -175,20 +183,35 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGi-td-VoB">
+                                <rect key="frame" x="0.0" y="460" width="375" height="2"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="frP-m3-eqx"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="SGi-td-VoB" firstAttribute="centerX" secondItem="7z4-q7-XKh" secondAttribute="centerX" id="05N-Ot-niw"/>
+                            <constraint firstAttribute="trailing" secondItem="SGi-td-VoB" secondAttribute="trailing" id="1MR-0a-uEI"/>
+                            <constraint firstAttribute="trailing" secondItem="qi3-Sq-b61" secondAttribute="trailing" id="1pr-mj-45G"/>
+                            <constraint firstItem="qi3-Sq-b61" firstAttribute="leading" secondItem="7z4-q7-XKh" secondAttribute="leading" id="9Sv-cr-xwr"/>
                             <constraint firstItem="9Be-RF-X5L" firstAttribute="centerX" secondItem="7z4-q7-XKh" secondAttribute="centerX" id="DZ3-bI-f78"/>
-                            <constraint firstItem="mDw-sj-M8g" firstAttribute="top" secondItem="z7R-Ca-zVE" secondAttribute="bottom" constant="20" id="E2a-oA-prR"/>
+                            <constraint firstItem="mDw-sj-M8g" firstAttribute="top" secondItem="qi3-Sq-b61" secondAttribute="bottom" constant="7" id="E2a-oA-prR"/>
                             <constraint firstItem="G1O-NT-8Lm" firstAttribute="trailing" secondItem="z7R-Ca-zVE" secondAttribute="trailing" constant="20" id="L84-4t-gRA"/>
                             <constraint firstItem="mDw-sj-M8g" firstAttribute="centerX" secondItem="7z4-q7-XKh" secondAttribute="centerX" id="P9H-A5-6a5"/>
+                            <constraint firstItem="SGi-td-VoB" firstAttribute="leading" secondItem="7z4-q7-XKh" secondAttribute="leading" id="QKf-FC-Yus"/>
                             <constraint firstItem="G1O-NT-8Lm" firstAttribute="trailing" secondItem="Wqa-8y-zO7" secondAttribute="trailing" constant="30" id="T50-zV-Xu4"/>
                             <constraint firstItem="G1O-NT-8Lm" firstAttribute="trailing" secondItem="9Be-RF-X5L" secondAttribute="trailing" constant="30" id="UL2-Ba-MBe"/>
+                            <constraint firstItem="qi3-Sq-b61" firstAttribute="top" secondItem="z7R-Ca-zVE" secondAttribute="bottom" constant="10.5" id="Xjs-v1-uNP"/>
                             <constraint firstItem="Wqa-8y-zO7" firstAttribute="centerX" secondItem="7z4-q7-XKh" secondAttribute="centerX" id="aMy-kM-nbd"/>
                             <constraint firstItem="9Be-RF-X5L" firstAttribute="leading" secondItem="G1O-NT-8Lm" secondAttribute="leading" constant="30" id="apw-B2-sK1"/>
                             <constraint firstItem="z7R-Ca-zVE" firstAttribute="centerX" secondItem="7z4-q7-XKh" secondAttribute="centerX" id="blP-yh-0fF"/>
                             <constraint firstItem="G1O-NT-8Lm" firstAttribute="trailing" secondItem="mDw-sj-M8g" secondAttribute="trailing" constant="20" id="btf-Ch-WbG"/>
-                            <constraint firstItem="Wqa-8y-zO7" firstAttribute="top" secondItem="9Be-RF-X5L" secondAttribute="bottom" constant="30" id="eWK-7J-un6"/>
+                            <constraint firstItem="SGi-td-VoB" firstAttribute="top" secondItem="9Be-RF-X5L" secondAttribute="bottom" constant="15" id="c6G-N6-b7O"/>
+                            <constraint firstItem="qi3-Sq-b61" firstAttribute="centerX" secondItem="7z4-q7-XKh" secondAttribute="centerX" id="eEz-GC-paA"/>
+                            <constraint firstItem="Wqa-8y-zO7" firstAttribute="top" secondItem="SGi-td-VoB" secondAttribute="bottom" constant="8.5" id="eWK-7J-un6"/>
                             <constraint firstItem="z7R-Ca-zVE" firstAttribute="top" secondItem="G1O-NT-8Lm" secondAttribute="top" constant="20" id="ekm-7T-msL"/>
                             <constraint firstItem="mDw-sj-M8g" firstAttribute="leading" secondItem="G1O-NT-8Lm" secondAttribute="leading" constant="20" id="i4f-Ah-gBk"/>
                             <constraint firstItem="z7R-Ca-zVE" firstAttribute="leading" secondItem="G1O-NT-8Lm" secondAttribute="leading" constant="20" id="mKA-0M-LOB"/>
