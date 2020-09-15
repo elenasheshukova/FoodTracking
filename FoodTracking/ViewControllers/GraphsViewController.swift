@@ -25,6 +25,10 @@ class GraphsViewController: UIViewController {
         
         let score = user.getTotalScore(date: date)
         changeView(day: score)
+        
+        print(Int(Double(Food.maxScores()) * 0.8))
+        print(Int(Double(Food.maxScores()) * 0.81))
+        print(Int(Double(Food.maxScores()) * 0.38))
     }
 }
 
@@ -32,27 +36,27 @@ extension GraphsViewController {
     private func changeView(day score: Int) {
         
         switch score {
-        case 0..<7:
+        case 0..<Int(Double(Food.maxScores()) * 0.38):
             getCaseDescription(color: #colorLiteral(red: 0.9764705896, green: 0.9467297923, blue: 0, alpha: 1),
                                user: score,
                                background: #colorLiteral(red: 0.6803390694, green: 0.8305631209, blue: 0.9764705896, alpha: 1),
                                description: "Отличное начало! 👏🏻")
-        case 7..<15:
+        case Int(Double(Food.maxScores()) * 0.38)..<Int(Double(Food.maxScores()) * 0.8):
             getCaseDescription(color: #colorLiteral(red: 0.6808604821, green: 0.9510826459, blue: 0, alpha: 1),
                                user: score,
                                background: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1),
                                description: "Ты почти у цели 🔥")
-        case 15:
+        case Int(Double(Food.maxScores()) * 0.8):
             getCaseDescription(color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1),
                                user: score,
                                background: #colorLiteral(red: 0.7009666562, green: 0.5654001832, blue: 0.9669840932, alpha: 1),
                                description: "Ты достиг дневной цели 🤟🏻")
-        case 16..<19:
+        case Int(Double(Food.maxScores()) * 0.81)..<Food.maxScores():
             getCaseDescription(color: #colorLiteral(red: 0.3712404636, green: 0.6928537436, blue: 0.2868239483, alpha: 1),
                                 user: score,
                                 background: #colorLiteral(red: 0.7009666562, green: 0.5654001832, blue: 0.9669840932, alpha: 1),
                                 description: "Так держать 😉")
-        case 19:
+        case Food.maxScores():
             getCaseDescription(color: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1),
                                 user: score,
                                 background: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1),
