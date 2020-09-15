@@ -18,7 +18,7 @@ struct AppTheme {
 
 extension AppTheme {
     static let light = AppTheme(
-        buttonBackgroundColor: .gray,
+        buttonBackgroundColor: .green,
         fieldBackgroundColor: UIColor(white: 0.9, alpha: 1),
         backgroundColor: .white,
         textColor: .darkText,
