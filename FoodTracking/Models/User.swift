@@ -14,7 +14,7 @@ class User{
 
     private init() {}
     
-    var name: String = "Иван"
+    var name: String = "Алексей"
     var weight: Double = 77
     var height: Double = 179
     var metricDimension = true
