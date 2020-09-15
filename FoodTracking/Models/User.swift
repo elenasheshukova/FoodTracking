@@ -15,8 +15,9 @@ class User{
     private init() {}
     
     var name: String = "Иван"
-    var weight: Double = 80
-    var height: Double = 180
+    var weight: Double = 77
+    var height: Double = 179
+    var metricDimension = true
     
     var colorTheme: AppTheme = .light
     
