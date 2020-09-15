@@ -53,8 +53,8 @@ class ProfileViewController: UIViewController {
         
         textMessages()
         addDoneButton()
-        metricSwitch.backgroundColor = .green
-        metricSwitch.layer.cornerRadius = metricSwitch.bounds.height / 2
+        setInitialMetrics()
+        colorThemeButton.layer.cornerRadius = 15
     }
     // смена темы день/ночь
     @IBAction func changeThemeButton() {
@@ -108,6 +108,20 @@ class ProfileViewController: UIViewController {
         greetingLabel.text = "\(period.label), \(user.name)! "
         resultOfTodayLabel.text = "Твой текущий результат: \(user.getTotalScore(date: date))"
     }
+    // установка начальных метрик
+    private func setInitialMetrics() {
+        metricSwitch.backgroundColor = .green
+        metricSwitch.layer.cornerRadius = metricSwitch.bounds.height / 2
+        if user.metricDimension {
+            weightInputField.text = String(format: "%.00f",user.weight)
+            heightInputField.text = String(format: "%.00f",user.height)
+            calculateIMT()
+        } else {
+            metricSwitch.isOn = false
+            dimentionChangedSwitch()
+        }
+    }
+
     // функция смены темы экрана
     private func applyTheme(_ theme: AppTheme) {
         user.colorTheme = theme
