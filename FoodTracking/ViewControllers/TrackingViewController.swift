@@ -41,6 +41,12 @@ class TrackingViewController: UIViewController {
         updateTotalScores()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        date = Date().stripTime()
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? FoodDetailViewController else { return }

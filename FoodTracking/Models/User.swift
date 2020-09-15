@@ -60,6 +60,18 @@ class User{
         }
         return total
     }
+    func getTotalPositiveScore(date: Date) -> Int {
+        var total = 0
+        let foods = Food.getFoods()
+        if let currentDayScores = self.dayScores[date] {
+            for score in currentDayScores {
+                if let foodsScores = foods.filter( {$0.id == score.foodId} ).first?.scores {
+                    total += foodsScores.prefix(score.score).filter({$0 > 0}).reduce(0, +)
+                }
+            }
+        }
+        return total
+    }
 }
 
 extension Date {
