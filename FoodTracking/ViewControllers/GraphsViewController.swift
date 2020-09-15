@@ -78,7 +78,7 @@ extension GraphsViewController {
         if value > 0 {
             circularProgress.setProgressWithAnimation(duration: 1.5,
                                                       value: (Float(1.0)/Float(Food.maxScores()))*Float(value))
-            valueLabel.text = "Ещё можно набрать \(Food.maxScores() - value) баллов"
+            valueLabel.text = "Ещё можно набрать \(Food.maxScores() - user.getTotalPositiveScore(date: date)) баллов"
             scoreMoreLabel.textColor = .black
         } else {
             circularProgress.setProgressWithAnimation(duration: 3.0,
