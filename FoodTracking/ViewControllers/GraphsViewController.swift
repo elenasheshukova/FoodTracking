@@ -25,10 +25,6 @@ class GraphsViewController: UIViewController {
         
         let score = user.getTotalScore(date: date)
         changeView(day: score)
-        
-        print(Int(Double(Food.maxScores()) * 0.8))
-        print(Int(Double(Food.maxScores()) * 0.81))
-        print(Int(Double(Food.maxScores()) * 0.38))
     }
 }
 
