@@ -55,6 +55,8 @@ class ProfileViewController: UIViewController {
         addDoneButton()
         setInitialMetrics()
         colorThemeButton.layer.cornerRadius = 15
+        heightInputField.delegate = self
+        weightInputField.delegate = self
     }
     // смена темы день/ночь
     @IBAction func changeThemeButton() {
