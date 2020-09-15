@@ -111,7 +111,7 @@ extension TrackingViewController: UITableViewDataSource{
                 let button = cell.scoreButtons[index]
                 button.setTitle(String(food.scores[index]), for: UIControl.State.normal)
                 
-                button.backgroundColor = index < score ? .systemYellow : .white
+                button.backgroundColor = index < score ?  .systemYellow : .white
             }
         }
         cell.tag = food.id
@@ -122,10 +122,10 @@ extension TrackingViewController: UITableViewDataSource{
 
 extension TrackingViewController: FoodTableViewCellDelegate {
     func customcell(cell: FoodTableViewCell, didTappedThe button: UIButton?) {
-        if button?.backgroundColor == .yellow {
-            user.deleteScore(date: date, foodId: cell.tag)
-        } else {
+        if button?.backgroundColor ==  .white {
             user.addScore(date: date, foodId: cell.tag)
+        } else {
+            user.deleteScore(date: date, foodId: cell.tag)
         }
         updateTotalScores()
         dailyScoresTableView.reloadData()
